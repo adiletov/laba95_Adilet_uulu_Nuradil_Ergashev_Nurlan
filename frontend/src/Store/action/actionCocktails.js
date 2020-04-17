@@ -42,7 +42,7 @@ export const addNewCocktail = cocktail => {
             const res = await axiosApi.post('/cocktails', cocktail, config);
             toast.success(res.data.message);
             dispatch(addNewCocktailSuccess());
-            dispatch(push('/'))
+            dispatch(push('/cocktails'))
         } catch (e) {
             if (e.response && e.response.data) {
                 dispatch(addNewCocktailError(e.response.data))

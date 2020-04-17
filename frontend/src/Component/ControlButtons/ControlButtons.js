@@ -34,17 +34,10 @@ const ControlButtons = ({cocktail, user}) => {
         }
     } else {
         if (cocktail.publish) {
-            return <><Chip label="Published" color="primary" disabled/>
-                <IconButton color="primary" onClick={() => deleteCocktail(cocktail._id)} component="span">
-                    <DeleteForeverIcon/>
-                </IconButton>
-            </>
+            return <Chip label="Published" color="primary" disabled/>
+
         } else {
-            return <><Chip label="your cocktail is under review by the moderator" color="secondary" disabled/>
-                <IconButton color="primary" onClick={() => deleteCocktail(cocktail._id)} component="span">
-                <DeleteForeverIcon/>
-                </IconButton>
-        </>
+            return <Chip label="your cocktail is under review by the moderator" color="secondary" disabled/>
         }
     }
 };
