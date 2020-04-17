@@ -108,7 +108,6 @@ export const deleteCocktailId = id => {
             const res = await axiosApi.delete('/cocktails/remove/' + id, config);
             toast.success(res.data.message);
             dispatch(deleteCocktailSuccess());
-            dispatch(getCocktailsUser());
             dispatch(getAllCocktails())
         } catch (e) {
             dispatch(deleteCocktailError(e))
